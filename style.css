@@ -1,55 +1,84 @@
-body, h1, h2, p {
+
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body styles */
 body {
-    background-color: #f8f8f8;
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
-.navbar {
+/* Navbar styles */
+nav {
     background-color: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 10px;
+    text-align: center;
 }
 
-.navbar a {
+nav a {
     color: #fff;
     text-decoration: none;
-    margin-right: 1rem;
+    margin: 0 10px;
 }
 
-.navbar a:hover {
-    color: #7c8cf7;
+/* Welcome section styles */
+.welcome {
+    text-align: center;
+    padding: 50px;
 }
 
-.main-content {
-    max-width: 800px;
+.about {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items at the top vertically */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+.gallery-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-h2 {
-    font-size: 1.8rem;
-    color: #555;
-    margin-bottom: 1rem;
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
 
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #333;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
 }
