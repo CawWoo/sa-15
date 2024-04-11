@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="java" href="script.js">
     <title>Portfolio</title>
 </head>
 <body>
@@ -30,11 +31,25 @@
     </div>
 
     <div id="portfolio" class="gallery">
-        <div class="gallery-item">
-            <img src="C:\Users\ali_r\Pictures\Laika.png" alt="Picture of Laika">
+        <div class="filter-buttons">
+            <button data-filter="all">All</button>
+            <button data-filter="web">Dogs</button>
+            <button data-filter="design">Cats</button>
         </div>
+
         <div class="gallery-item">
-            <img src="C:\Users\ali_r\Pictures\Katie.png" alt="Picture of Katie">
+            <div class="gallery-item" data-category="dog">
+                <img src="C:\Users\ali_r\Pictures\Laika.png" alt="Picture of Laika">
+                <h3> Laika</h3>
+                <p>Laika, one year old Husky</p>
+            </div>
+        </div>
+
+            <div class="gallery-item" data-category="cat">
+                <img src="C:\Users\ali_r\Pictures\Katie.png" alt="Picture of Katie">
+                <h3> Katie </h3>
+                <p>Katie, 18 year old cat</p>
+            </div>
         </div>
     </div>
 
@@ -48,6 +63,35 @@
     <footer>
         © 2024 My Portfolio (Alicia Ruz)
     </footer>
+
+<script>
+    const portfolioItems = [
+    { title: 'Dog Pictures', category: 'dog' },
+    { title: 'Cat Pictures', category: 'cat' },
+];
+
+function filterItems(category) {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    portfolioItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+            item.style.display = 'block'; 
+        } else {
+            item.style.display = 'none'; 
+        }
+    });
+}
+
+const filterButtons = document.querySelectorAll('.filter-buttons button');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-filter');
+        filterItems(category);
+    });
+});
+</script>
 </body>
 </html>
 

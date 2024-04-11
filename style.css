@@ -82,3 +82,13 @@ footer {
         padding: 1rem;
     }
 }
+
+/* Style the filter buttons */
+.filter-buttons button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
