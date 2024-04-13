@@ -33,24 +33,35 @@
     <div id="portfolio" class="gallery">
         <div class="filter-buttons">
             <button data-filter="all">All</button>
-            <button data-filter="web">Dogs</button>
-            <button data-filter="design">Cats</button>
+            <button data-filter="dog">Dogs</button>
+            <button data-filter="cat">Cats</button>
         </div>
 
-        <div class="gallery-item">
-            <div class="gallery-item" data-category="dog">
-                <img src="C:\Users\ali_r\Pictures\Laika.png" alt="Picture of Laika">
-                <h3> Laika</h3>
-                <p>Laika, one year old Husky</p>
-            </div>
+        <div class="gallery-item" data-category="dog">
+            <img src="images/Laika.png" alt="Picture of Laika">
+            <h3> Laika </h3>
+            <p>Laika, one year old Husky</p>
         </div>
 
-            <div class="gallery-item" data-category="cat">
-                <img src="C:\Users\ali_r\Pictures\Katie.png" alt="Picture of Katie">
-                <h3> Katie </h3>
-                <p>Katie, 18 year old cat</p>
-            </div>
+        <div class="gallery-item" data-category="dog">
+            <img src="images/Buddy.png" alt="Picture of Buddy">
+            <h3> Buddy </h3>
+            <p>Buddy, 13 year old Golden Retriever</p>
         </div>
+
+        <div class="gallery-item" data-category="cat">
+            <img src="images/Katie.png" alt="Picture of Katie">
+            <h3> Katie </h3>
+            <p>Katie, 18 year old cat</p>
+        </div>
+
+        <div class="gallery-item" data-category="cat">
+            <img src="images/TrinketAndIji.png" alt="Picture of Two Cats">
+            <h3> Trinket and Iji </h3>
+            <p>Two sibling</p>
+        </div>
+    </div>
+
     </div>
 
     <section id="contact" class="contact">
@@ -64,33 +75,7 @@
         © 2024 My Portfolio (Alicia Ruz)
     </footer>
 
-<script>
-    const portfolioItems = [
-    { title: 'Dog Pictures', category: 'dog' },
-    { title: 'Cat Pictures', category: 'cat' },
-];
-
-function filterItems(category) {
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    portfolioItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (category === 'all' || itemCategory === category) {
-            item.style.display = 'block'; 
-        } else {
-            item.style.display = 'none'; 
-        }
-    });
-}
-
-const filterButtons = document.querySelectorAll('.filter-buttons button');
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const category = button.getAttribute('data-filter');
-        filterItems(category);
-    });
-});
+    <script src= "script.js">
 </script>
 </body>
 </html>
