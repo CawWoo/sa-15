@@ -71,18 +71,28 @@ nav a {
     transform: scale(1.1);
 }
 
-/* Style the filter buttons */
+
+.filter-buttons {
+    align-items: center;
+    display: flex-box;
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    }
+
 .filter-buttons button {
-    text-align: center;
     background-color: #333;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     margin-right: 1rem;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
 }
+
+.filter-buttons button:hover {
+    color: #ff9900;
+}
+
 
 footer {
     text-align: center;
